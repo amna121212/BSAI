@@ -1,48 +1,47 @@
-# README: Functions in Data Preprocessing Notebook
-This notebook contains various functions designed for efficient and reusable data preprocessing tasks. Below is a brief description of the key functions included:
+# Dataset Overview
 
-Functions Overview
-1. **load_data(file_path)**
-Purpose: Loads data from a specified file path.
-Input: File path (CSV, Excel, etc.).
-Output: Returns a pandas DataFrame.
-2. **clean_missing_values**
- (df, strategy="mean")
-Purpose: Handles missing values in the dataset.
-Parameters:
-df: DataFrame to process.
-*strateg*y: Method for filling missing values (e.g., "mean", "median", or "drop").
-Output: Cleaned DataFrame.
-3.**remove_duplicates(df)**
-Purpose: Identifies and removes duplicate rows.
-Input: DataFrame.
-Output: DataFrame without duplicates.
-1. **scale_features**(df, columns)
-Purpose: Scales specified columns using standardization or normalization.
-Parameters:
-df: DataFrame to process.
-columns: List of columns to scale.
-Output: DataFrame with scaled features.
-1. **encode_categorical**(df, columns)
-Purpose: Encodes categorical features into numeric formats.
-Parameters:
-df: DataFrame to process.
-columns: List of categorical columns to encode.
-Output: DataFrame with encoded features.
-1. **visualize_data**(df, columns)
-Purpose: Generates plots to visualize data distributions and relationships.
-Parameters:
-df: DataFrame to visualize.
-columns: List of columns to plot.
-Output: Displays graphs (e.g., histograms, scatterplots).
-1. **export_data**(df, file_path)
-Purpose: Saves the processed DataFrame to a specified file path.
-Input:
-df: DataFrame to save.
-file_path: Destination path (e.g., CSV or Excel).
-Output: File saved to the specified location.
-How to Use
-Import Functions: Use import or copy-paste into your script.
-Call Functions: Follow the examples in the notebook for usage.
-Adapt Functions: Customize them to fit your dataset and requirements.
- 
+## About the Dataset
+
+This dataset contains information about screen time usage across various mobile applications.
+It provides insights into how users interact with their apps on a daily basis
+
+## Dataset Summary
+
+- Number of Rows: 200
+- Number of Columns: 5
+
+## Missing Values
+
+Date               0
+App                0
+Usage (minutes)    0
+Notifications      0
+Times Opened       0
+
+## How to Use This Data
+
+1. Load the dataset using Pandas:
+   python
+   import pandas as pd
+   df = pd.read_csv('screentime.csv')
+2. Perform exploratory data analysis (EDA) to understand trends.
+3. Clean and preprocess data as required.
+
+## Purpose
+
+This dataset is for educational and research purposes only.
+
+### Columns Description
+
+1. *Date*: Represents the date on which the screen time usage was recorded.
+2. *App*: The name of the mobile application being used.
+3. *Usage (minutes)*: The total number of minutes spent using the app on a given day.
+4. *Notifications*: The number of notifications received from the app.
+5. *Times Opened*: The number of times the app was opened throughout the day.
+
+### Conclusions
+
+- Analyzing mobile usage trends over time.
+- Identifying the most used apps and their impact on productivity.
+- Understanding app engagement patterns through notifications and app openings.
+- Developing personalized recommendations for screen time management.
